@@ -10,7 +10,7 @@ import linkedin from '../assets/linkedin.svg'
 import Lab from './layout/lab'
 import Lang from "./layout/lang"
 import Project from "./layout/project"
-import About from "./layout/about"
+import About from "./layout/About"
 import { usePortfolioVoiceReader } from "./data/VoiceReader"
 import { FiMic, FiMicOff } from "react-icons/fi"
 
