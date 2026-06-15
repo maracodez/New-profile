@@ -44,7 +44,7 @@ const Page = () => {
                 </p>
                 <div className="md:absolute md:right-[10%] md:top-[38%] lg:right-[20%] pt-4">
                     <h3 className="font-semibold text-2xl md:text-lg ml-[13%]"><span className="md:hidden">...</span>A web developer who</h3>
-                    <h2 className="text-[3.5rem] break-words leading-tights px-8 md:py-2 ">Code. Design. <p className="text-purple-500 md:mt-4 border-1 border-white rounded-tr-full rounded-bl-full py-2 px-4 text-[2.9rem] md:px-8 max-w-full break-words">Performance...</p> </h2>
+                    <h2 className="text-[3.5rem] break-words leading-tights px-8 md:py-2 ">Code. Design. <p className="text-purple-500 md:mt-4 border-1 border-white rounded-tr-full rounded-bl-full py-2 px-5 text-[2rem] md:text-[3rem] md:px-8 max-w-full break-words">Performance...</p> </h2>
                     <p className="text-xl ml-8 tracking-widest ">delivered in one seamless experience!</p>
                 </div>
             </div>
