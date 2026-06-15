@@ -21,6 +21,18 @@ export function usePortfolioVoiceReader() {
 
         const utterance = new SpeechSynthesisUtterance(introText);
 
+        const voices = window.speechSynthesis.getVoices();
+
+        // Attempt to find a standard Google, Microsoft, or Apple voice profile
+        // You can filter by name patterns like "Google US English", "Samantha", or "Zira"
+        const preferredVoice = voices.find(voice => 
+        voice.name.includes("Google US English") || voice.name.includes("Zira")
+        );
+
+        if (preferredVoice) {
+        utterance.voice = preferredVoice;
+        }
+
         utterance.rate = 1.0;
         utterance.pitch = 1.0;
 

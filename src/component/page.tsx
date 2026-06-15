@@ -27,13 +27,13 @@ const Page = () => {
                 <img 
                     src={shadow} 
                     alt={shadow} 
-                    className=" lg:w-[50%] "
+                    className="w-full max-w-[400px] md:max-w-none md:w-[60%] lg:w-[50%] "
                 />
                 <img 
                     src={avarta} 
                     alt="profile" 
-                    className="w-52 h-52 md:w-56 md:h-56 rounded-full absolute top-[28%] md:top-[40%] lg:top-[35%] left-42 md:left-52"
-                />
+                    className="w-52 h-52 md:w-56 md:h-56 rounded-full absolute top-[28%] md:top-[40%] lg:top-[35%] left-1/2 -translate-x-1/2 md:left-52 md:translate-x-0"
+                /> 
                 <img 
                     src={arrow}  
                     alt="" 
@@ -44,7 +44,7 @@ const Page = () => {
                 </p>
                 <div className="md:absolute md:right-[10%] md:top-[38%] lg:right-[20%] pt-4">
                     <h3 className="font-semibold text-2xl md:text-lg ml-[13%]"><span className="md:hidden">...</span>A web developer who</h3>
-                    <h2 className="text-[4rem] px-8 md:py-2">Code. Design. <p className="text-purple-500 md:mt-4 border-1 border-white rounded-tr-full rounded-bl-full pl-8 text-[2.95rem] md:px-8">Performance...</p> </h2>
+                    <h2 className="text-[3.5rem] break-words leading-tights px-8 md:py-2 ">Code. Design. <p className="text-purple-500 md:mt-4 border-1 border-white rounded-tr-full rounded-bl-full py-2 px-4 text-[2.9rem] md:px-8 max-w-full break-words">Performance...</p> </h2>
                     <p className="text-xl ml-8 tracking-widest ">delivered in one seamless experience!</p>
                 </div>
             </div>
