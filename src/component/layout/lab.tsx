@@ -63,7 +63,7 @@ const lab = () => {
 				<img 
 					src={task} 
 					alt="" 
-					className=" md:w-1/4 md:h-42"
+					className=" w-1/4 h-42"
 				/>
 				<div>
 					<h1 className="font-bold text-3xl md:text-4xl">Personal Project</h1>
@@ -80,7 +80,7 @@ const lab = () => {
 				<img 
 					src={bglight} 
 					alt="" 
-					className="md:w-1/4 md:h-42"
+					className="w-1/4 h-42"
 				/>
 				<div>
 					<h1 className="font-bold text-2xl md:text-4xl">Portfolio Website</h1>
@@ -97,7 +97,7 @@ const lab = () => {
 				<img 
 					src={starred} 
 					alt="" 
-					className="md:w-1/4 md:h-42"
+					className="w-1/4 h-42"
 				/>
 				<div>
 					<h1 className="font-bold text-3xl">E-Commerce Dashboard</h1>
