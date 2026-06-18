@@ -1,5 +1,5 @@
 //import React from 'react'
-//import { motion } from 'motion'
+import { motion } from 'motion/react'
 import Navbar from "./layout/navbar"
 import shadow from "../assets/Gradient.png"
 import avarta from "../assets/profile1 (2).jpg"
@@ -24,29 +24,45 @@ const Page = () => {
        <Navbar />
        <div className="py-[14%] px-[4%] md:py-72 md:px-[10%]" id="main-content">
             <div className="md:relative md:flex items-center">
-                <img 
+                <motion.img 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1 }}
                     src={shadow} 
                     alt={shadow} 
                     className="w-full max-w-[400px] md:max-w-none md:w-[60%] lg:w-[50%] "
                 />
-                <img 
+                <motion.img
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1 }} 
                     src={avarta} 
                     alt="profile" 
-                    className="w-52 h-52 md:w-56 md:h-56 rounded-full absolute top-[28%] md:top-[40%] lg:top-[35%] left-1/2 -translate-x-1/2 md:left-52 md:translate-x-0"
+                    className="w-52 h-52 md:w-56 md:h-56 rounded-full absolute top-[22%] md:top-[40%] lg:top-[35%] left-1/2 -translate-x-1/2 md:left-54 md:translate-x-0"
                 /> 
                 <img 
                     src={arrow}  
                     alt="" 
                     className="hidden md:block md:absolute md:left-[42%] lg:left-[35%] md:top-2"
                 />
-                <p className="md:absolute md:top-8 md:right-[20%] lg:right-[40%] text-2xl md:text-xl">
+                <motion.p 
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0}}
+                    transition={{ duration: 0.9, ease: "easeOut" }}
+                    className="md:absolute md:top-8 md:right-[20%] lg:right-[40%] text-2xl md:text-xl"
+                >
                     Hello! I Am <span className="text-purple-500">Mara Ruth</span>
-                </p>
-                <div className="md:absolute md:right-[10%] md:top-[38%] lg:right-[20%] pt-4">
+                </motion.p>
+                <motion.div 
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.96 }}
+                    className="md:absolute md:right-[10%] md:top-[38%] lg:right-[20%] pt-4"
+                >
                     <h3 className="font-semibold text-2xl md:text-lg ml-[13%]"><span className="md:hidden">...</span>A web developer who</h3>
                     <h2 className="text-[3.5rem] break-words leading-tights px-8 md:py-2 ">Code. Design. <p className="text-purple-500 md:mt-4 border-1 border-white rounded-tr-full rounded-bl-full py-2 px-5 text-[2rem] md:text-[3rem] md:px-8 max-w-full break-words">Performance...</p> </h2>
                     <p className="text-xl ml-8 tracking-widest ">delivered in one seamless experience!</p>
-                </div>
+                </motion.div>
             </div>
             <div id="about">
                 <About />
@@ -57,9 +73,11 @@ const Page = () => {
             <Lang />
             <Project />
             <div className="mt-32 md:px-[2%]">
-                <button
+                <motion.button
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
                     onClick={toggleVoice}
-                    className="fixed bottom-6 right-8 z-50 flex items-center gap-2 bg-gray-200 text-black text-4xl p-3 rounded-full shadow-md hover:scale-110 transition-transform duration-300 cursor-pointer"
+                    className="fixed bottom-6 right-8 z-50 flex items-center gap-2 bg-gray-200 text-black text-4xl p-3 rounded-full shadow-md cursor-pointer"
                 >
                     {isSpeaking ? 
                         <FiMic 
@@ -71,32 +89,51 @@ const Page = () => {
                             className="text-red-500"
                         />
                     }
-                </button>
-                <h2 className="text-[2.5rem]">Contact</h2>
-                <p className="py-22 tracking-wider text-2xl">I'm currently looking into joining a cross-functional team that values improving people's lives <br />through accessible design. or have a project in mind? Let's connect.</p>
-                <a href="mailto:amarachiruhty4@gmail.com" className="text-xl hover:text-purple-500">amarachiruhty4@gmail.com</a>
+                </motion.button>
+                <motion.h2
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0}}
+                    transition={{ duration: 0.9, ease: "easeOut" }}
+                    className="text-[2.5rem]"
+                >Contact</motion.h2>
+                <motion.p 
+                    className="py-22 tracking-wider text-2xl"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.7 }}
+                    viewport={{ once: true }}
+                >
+                    I'm currently looking into joining a cross-functional team that values improving people's lives <br />through accessible design. or have a project in mind? Let's connect.
+                </motion.p>
+                <a href="mailto:amarachiruhty4@gmail.com" className="text-xl hover:text-purple-500 hover:text-lg">amarachiruhty4@gmail.com</a>
                 <div className="flex gap-6 mt-22">
-                    <a 
+                    <motion.a
+                        whileHover={{ scale: 1.5 }}
+                        whileTap={{ scale: 0.95 }} 
                         href="https://twitter.com/maracodez"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <img src={icon} alt="" />
-                    </a>
-                    <a 
+                    </motion.a>
+                    <motion.a 
+                        whileHover={{ scale: 1.3 }}
+                        whileTap={{ scale: 0.95 }}
                         href="https://www.google.com"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <img src={google} alt="" />
-                    </a>
-                    <a 
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.5 }}
+                        whileTap={{ scale: 0.95 }} 
                         href="https://www.linkedin.com/in/mara-ruthy-2b6a5032b"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <img src={linkedin} alt="" />
-                    </a>
+                    </motion.a>
                 </div>
             </div>
        </div>

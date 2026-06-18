@@ -1,5 +1,5 @@
 //import React from 'react'
-// import { motion } from "motion"
+import { motion } from "motion/react"
 import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 //import { useNavigate } from "react-router-dom";
@@ -56,7 +56,10 @@ const Navbar = () => {
     //const closeMenu = () => setIsOpen(false);
 
   return (
-    <div 
+    <motion.nav 
+		initial={{ y: -80 }}
+      	animate={{ y: 0 }}
+      	transition={{ duration: 0.8 }}
 		className={` text-white fixed top-0 left-0 right-0 px-12 md:px-50 py-4 md:py-8 ${
 			scrolled
 			? "bg-[#1A0B2E] backdrop-blur-md shadow-md "
@@ -108,12 +111,12 @@ const Navbar = () => {
                 id="skills"
                 className="md:hidden bg-[#1A0B2E] backdrop-blur-md flex flex-col font-semibold hover:text-lg items-center gap-4 py-6 shadow-md text-lg"
             >
-               <button onClick={() => scrollToSection('page')} className={`cursor-pointer ${activeSection === "page" ? "text-purple-500" : "text-white"}`}>Home</button>
-                <button onClick={() => scrollToSection('about')} className={`cursor-pointer ${activeSection === "about" ? "text-purple-500" : "text-white"}`}>About</button>
-                <button onClick={() => scrollToSection('lab')} className={`cursor-pointer ${activeSection === "lab" ? "text-purple-500" : "text-white"}`}>Lab</button>
+               <button onClick={() => scrollToSection('page')} className={`cursor-pointer ${activeSection === "page" ? "text-purple-500" : "text-white hover:text-purple-500 hover:text-xl"}`}>Home</button>
+                <button onClick={() => scrollToSection('about')} className={`cursor-pointer ${activeSection === "about" ? "text-purple-500" : "text-white hover:text-purple-500 hover:text-xl"}`}>About</button>
+                <button onClick={() => scrollToSection('lab')} className={`cursor-pointer ${activeSection === "lab" ? "text-purple-500" : "text-white hover:text-purple-500 hover:text-xl"}`}>Lab</button>
             </div>
         )}
-    </div>
+    </motion.nav>
   )
 }
 
