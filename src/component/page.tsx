@@ -77,19 +77,60 @@ const Page = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={toggleVoice}
-                    className="fixed bottom-6 right-8 z-50 flex items-center gap-2 bg-gray-200 text-black text-4xl p-3 rounded-full shadow-md cursor-pointer"
+                    className="fixed bottom-6 right-8 z-50 flex items-center gap-2 bg-[#8b5cf6] text-black text-4xl p-3 rounded-full shadow-md cursor-pointer"
                 >
-                    {isSpeaking ? 
-                        <FiMic 
-                            title="Mute Voice Reader"
-                        /> 
-                        : 
-                        <FiMicOff 
-                            title="Listen to Portfolio"
-                            className="text-red-500"
-                        />
-                    }
+                    <motion.div
+                        animate={ 
+                            isSpeaking
+                            ? {
+                                rotate: 300,
+                                scale: [1, 1.80, 1]
+                            }
+                            : {
+                                scale: 1,
+                            }
+                        }
+                        transition={{
+                            rotate: {
+                                duration: 12,
+                                repeat: Infinity,
+                                ease: "linear",
+                            },
+                        }}
+                        className='absolute w-28 h-28 rounded-full bg-[conic-gradient(from_180deg, #42e8ff, #8b5cf6, #d946ef, #42e8ff)] blur-xl opacity-80'
+                    />
+                     
+                    <div className='absolute w-24 h-24 rounded-full bg-[#d946ef]'/>
+                    <motion.div
+                        animate={
+                            isSpeaking
+                            ? {
+                                scale: [1, 1.04, 1],
+                            }
+                            : {
+                                scale: 1,
+                            }
+                        }
+                        transition={{
+                            duration: 1.8,
+                            repeat: Infinity,
+                        }}
+                        className='relative flex items-center justify-center w-20 h-20 rounded-full bg-[#241c62] text-white shadow-[0_0_30px_rgba(0,0,0,0.4)]'
+                    >
+                        {isSpeaking ? (
+                            <FiMic 
+                                title="Mute Voice Reader"
+                            /> 
+                         ) : (
+                            <FiMicOff 
+                                title="Listen to Portfolio"
+                                className="text-gray-500"
+                            />
+                        )}
+                    </motion.div>
+                    
                 </motion.button>
+
                 <motion.h2
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0}}
