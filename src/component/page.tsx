@@ -60,7 +60,7 @@ const Page = () => {
                     className="md:absolute md:right-[10%] md:top-[38%] lg:right-[20%] pt-4"
                 >
                     <h3 className="font-semibold text-2xl md:text-lg ml-[13%]"><span className="md:hidden">...</span>A web developer who</h3>
-                    <h2 className="text-[3.5rem] break-words leading-tights px-8 md:py-2 ">Code. Design. <p className="text-purple-500 md:mt-4 border-1 border-white rounded-tr-full rounded-bl-full py-2 px-5 text-[2rem] md:text-[3rem] md:px-8 max-w-full break-words">Performance...</p> </h2>
+                    <h2 className="text-[2.5rem] md:text-[3.5rem] break-words leading-tights px-8 md:py-2 ">Code. Design. <p className="text-purple-500 md:mt-4 border-1 border-white rounded-tr-full rounded-bl-full py-2 px-4 text-[1.8rem] md:text-[3rem] md:px-8 max-w-full break-words">Performance...</p> </h2>
                     <p className="text-xl ml-8 tracking-widest ">delivered in one seamless experience!</p>
                 </motion.div>
             </div>
@@ -100,7 +100,7 @@ const Page = () => {
                         className='absolute w-28 h-28 rounded-full bg-[conic-gradient(from_180deg, #42e8ff, #8b5cf6, #d946ef, #42e8ff)] blur-xl opacity-80'
                     />
                      
-                    <div className='absolute w-24 h-24 rounded-full bg-[#d946ef]'/>
+                    <div className='absolute w-24 h-24 rounded-full bg-gradient-to-br from-[#d946ef] to-pink-300'/>
                     <motion.div
                         animate={
                             isSpeaking
@@ -115,7 +115,7 @@ const Page = () => {
                             duration: 1.8,
                             repeat: Infinity,
                         }}
-                        className='relative flex items-center justify-center w-20 h-20 rounded-full bg-[#241c62] text-white shadow-[0_0_30px_rgba(0,0,0,0.4)]'
+                        className='relative flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#241c62] to-blue-300 text-white shadow-[0_0_30px_rgba(0,0,0,0.4)]'
                     >
                         {isSpeaking ? (
                             <FiMic 

@@ -33,13 +33,19 @@ const About = () => {
 				{(showMore || !isMobile)  && <span className="mt-4"> I believe great front-end development can bridge the gap between people and powerful tech. As I grow in the field, I aim to contribute to projects that promote accessibility, innovation, and inclusivity in tech. I see every line of code as a step toward making digital experiences more meaningful and impactful.</span>}
 
 				{isMobile && (
-					<button 
+					<motion.button 
+						initial={{ opacity: 0, x: -50 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.95 }} 
+						transition={{ duration: 0.7 }}
+						viewport={{ once: true }}
 						onClick={() => setShowMore((prev) => !prev)}
 						id="mode"
-						className="text-purple-600 underline cursor-pointer mb-4 pl-4"
+						className="bg-gradient-to-br from-[#130428] to-[#21113A] border-2 rounded-2xl border-[#2B1B4A] cursor-pointer mb-4 p-4"
 					>
 						{showMore ? "Show less" : "Read more"}
-					</button>    
+					</motion.button>    
 				)}
 			</div>
 		</motion.div>
