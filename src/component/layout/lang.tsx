@@ -82,7 +82,9 @@ const Lang = () => {
                         alt="react icon" 
                     /> */}
                 </div>
-                
+                <div>
+                    <p className='font-bold text-purple-500 text-lg'>TS</p>
+                </div>
             </div>
         </div>
         <div className='hidden w-1/2 mx-auto'>

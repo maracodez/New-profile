@@ -7,19 +7,6 @@ import { motion } from 'motion/react'
 
 
 const lab = () => {
-
-	// const cardVariants = {
-	// 	hdden: { opacity: 0, y: 50 },
-	// 	visible: (index: number) => ({
-	// 		opacity: 1,
-	// 		y: 0,
-	// 		transition: {
-	// 			delay: index * 0.2,
-	// 			duration: 0.6,
-	// 			ease: "easeOut"
-	// 		}
-	// 	})
-	// }
   return (
     <div 
 		
@@ -42,13 +29,13 @@ const lab = () => {
 			}}
 			className="md:flex md:flex-wrap md:gap-x-4 md:mt-8"
 		>
-			<div className="bg-gradient-to-br from-[#130428] to-[#21113A] border-2 border-[#2B1B4A] rounded-2xl shadow-lg p-8 mt-12 md:w-[48%] md:flex gap-2 md:gap-4">
+			<div className="bg-gradient-to-br from-[#130428] to-[#21113A]  border-2 border-[#2B1B4A] hover:border-[#8b5cf6] rounded-2xl shadow-lg p-8 mt-12 md:w-[48%] md:flex gap-2 md:gap-4">
 				<img 
 					src={tech} 
 					alt="" 
 					className="w-[30%] md:w-1/4 rounded-xl"
 				/>
-				<div>
+				<div className=''>
 					<h1 className="font-bold text-4xl">Techquest</h1>
 					<p className="leading-tight text-lg py-4">Built responsive frontend components and collaborated on modern web interfaces using frontend frameworks.</p>
 					<a 
@@ -59,7 +46,7 @@ const lab = () => {
 					>Learn More</a>
 				</div>
 			</div>
-			<div className="bg-gradient-to-br from-[#1A0F2E] to-[#21113A] border-2 border-[#2B1B4A] rounded-2xl shadow-lg p-4 md:p-8 mt-12 md:w-[50%] md:flex gap-2 md:gap-4">
+			<div className="bg-gradient-to-br from-[#1A0F2E] to-[#21113A] border-2 border-[#2B1B4A] hover:border-[#8b5cf6] rounded-2xl shadow-lg p-4 md:p-8 mt-12 md:w-[50%] md:flex gap-2 md:gap-4">
 				<img 
 					src={task} 
 					alt="" 
@@ -76,7 +63,7 @@ const lab = () => {
 					>Learn More</a>
 				</div>
 			</div>
-			<div className="bg-gradient-to-br from-[#1A0F2E] to-[#21113A] border-2 border-[#2B1B4A] rounded-2xl shadow-lg p-4 md:p-8 mt-12 md:w-[48%] md:flex gap-2 md:gap-4">
+			<div className="bg-gradient-to-br from-[#1A0F2E] to-[#21113A] border-2 border-[#2B1B4A] hover:border-[#8b5cf6] rounded-2xl shadow-lg p-4 md:p-8 mt-12 md:w-[48%] md:flex gap-2 md:gap-4">
 				<img 
 					src={bglight} 
 					alt="" 
@@ -93,7 +80,7 @@ const lab = () => {
 					>Learn More</a>
 				</div>
 			</div>
-			<div className="bg-gradient-to-br from-[#1A0F2E] to-[#21113A] border-2 border-[#2B1B4A] rounded-2xl shadow-lg p-8 mt-12 md:w-[50%] md:flex md:gap-4">
+			<div className="bg-gradient-to-br from-[#1A0F2E] to-[#21113A] border-2 border-[#2B1B4A] hover:border-[#8b5cf6] rounded-2xl shadow-lg p-8 mt-12 md:w-[50%] md:flex md:gap-4">
 				<img 
 					src={starred} 
 					alt="" 

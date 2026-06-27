@@ -7,6 +7,7 @@ import arrow from '../assets/Arrow.png'
 import icon from '../assets/icon-twitter.svg'
 import google from '../assets/Vector.png'
 import linkedin from '../assets/linkedin.svg'
+import mail from '../assets/Mail.png'
 import Lab from './layout/lab'
 import Lang from "./layout/lang"
 import Project from "./layout/project"
@@ -30,26 +31,28 @@ const Page = () => {
                     transition={{ duration: 1 }}
                     src={shadow} 
                     alt={shadow} 
-                    className="w-full max-w-[400px] md:max-w-none md:w-[60%] lg:w-[50%] "
+                    className="shadow w-full max-w-[400px] md:max-w-none md:w-[60%] lg:w-[50%] "
                 />
-                <motion.img
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1 }} 
-                    src={avarta} 
-                    alt="profile" 
-                    className="w-52 h-52 md:w-56 md:h-56 rounded-full absolute top-[22%] md:top-[40%] lg:top-[35%] left-1/2 -translate-x-1/2 md:left-54 md:translate-x-0"
-                /> 
+                <div className='image-wrapper'>
+                    <motion.img
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1 }} 
+                        src={avarta} 
+                        alt="profile" 
+                        className="about-image w-52 h-52 md:w-56 md:h-56 rounded-full absolute top-[22%] md:top-[40%] lg:top-[35%] left-1/2 -translate-x-1/2 md:left-54 md:translate-x-0"
+                    /> 
+                </div>
                 <img 
                     src={arrow}  
                     alt="" 
-                    className="hidden md:block md:absolute md:left-[42%] lg:left-[35%] md:top-2"
+                    className="arrow hidden md:block md:absolute md:left-[42%] lg:left-[35%] md:top-2"
                 />
                 <motion.p 
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0}}
                     transition={{ duration: 0.9, ease: "easeOut" }}
-                    className="md:absolute md:top-8 md:right-[20%] lg:right-[40%] text-2xl md:text-xl"
+                    className="title md:absolute md:top-8 md:right-[20%] lg:right-[40%] text-2xl md:text-xl"
                 >
                     Hello! I Am <span className="text-purple-500">Mara Ruth</span>
                 </motion.p>
@@ -57,7 +60,7 @@ const Page = () => {
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.96 }}
-                    className="md:absolute md:right-[10%] md:top-[38%] lg:right-[20%] pt-4"
+                    className="desc md:absolute md:right-[10%] md:top-[38%] lg:right-[20%] pt-4"
                 >
                     <h3 className="font-semibold text-2xl md:text-lg ml-[13%]"><span className="md:hidden">...</span>A web developer who</h3>
                     <h2 className="text-[2.5rem] md:text-[3.5rem] break-words leading-tights px-8 md:py-2 ">Code. Design. <p className="text-purple-500 md:mt-4 border-1 border-white rounded-tr-full rounded-bl-full py-2 px-4 text-[1.8rem] md:text-[3rem] md:px-8 max-w-full break-words">Performance...</p> </h2>
@@ -146,7 +149,14 @@ const Page = () => {
                 >
                     I'm currently looking into joining a cross-functional team that values improving people's lives <br />through accessible design. or have a project in mind? Let's connect.
                 </motion.p>
-                <a href="mailto:amarachiruhty4@gmail.com" className="text-xl hover:text-purple-500 hover:text-lg">amarachiruhty4@gmail.com</a>
+                <div className='flex gap-6'>
+                    <div className="bg-[#8b5cf6] py-6 px-8 rounded-full">
+                        <img src={mail} alt="" className='w-[22px]'/>
+                    </div>
+                    <div className='pt-5'>
+                        <a href="mailto:amarachiruhty4@gmail.com" className="text-xl hover:text-purple-500 hover:text-lg text-center">amarachiruhty4@gmail.com</a>
+                    </div>
+                </div>
                 <div className="flex gap-6 mt-22">
                     <motion.a
                         whileHover={{ scale: 1.5 }}

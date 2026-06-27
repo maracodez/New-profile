@@ -60,7 +60,7 @@ const Navbar = () => {
 		initial={{ y: -80 }}
       	animate={{ y: 0 }}
       	transition={{ duration: 0.8 }}
-		className={` text-white fixed top-0 left-0 right-0 px-12 md:px-50 py-4 md:py-8 ${
+		className={`nav text-white fixed top-0 left-0 right-0 px-12 md:px-50 py-4 md:py-8 ${
 			scrolled
 			? "bg-[#1A0B2E] backdrop-blur-md shadow-md "
 			: "bg-transparent"
@@ -103,6 +103,9 @@ const Navbar = () => {
 					}`}
                     onClick={() => scrollToSection('lab')}
 				>Lab</button>
+				<button>
+					<a className="bg-[#8b5cf6] text-[#ffffff] px-[1.5rem] py-[0.75rem] rounded-full cursor-pointer hover:shadow-[0_0_20px_rgba(139, 92, 246, 0.3)] hover:opacity-[0.9]" href="#">RESUME</a>
+				</button>
             </div>
         </div>
 
@@ -114,6 +117,9 @@ const Navbar = () => {
                <button onClick={() => scrollToSection('page')} className={`cursor-pointer ${activeSection === "page" ? "text-purple-500" : "text-white hover:text-purple-500 hover:text-xl"}`}>Home</button>
                 <button onClick={() => scrollToSection('about')} className={`cursor-pointer ${activeSection === "about" ? "text-purple-500" : "text-white hover:text-purple-500 hover:text-xl"}`}>About</button>
                 <button onClick={() => scrollToSection('lab')} className={`cursor-pointer ${activeSection === "lab" ? "text-purple-500" : "text-white hover:text-purple-500 hover:text-xl"}`}>Lab</button>
+				<button>
+					<a className="bg-[#8b5cf6] text-[#ffffff] px-[1.5rem] py-[0.75rem] rounded-full cursor-pointer hover:shadow-[0_0_20px_rgba(139, 92, 246, 0.3)] hover:opacity-[0.9]" href="#">RESUME</a>
+				</button>
             </div>
         )}
     </motion.nav>

@@ -7,3 +7,111 @@ html {
 body {
     font-family:  'preahvihear', 'Inter', sans-serif;
 }
+
+.shadow {
+	display: block;
+}
+
+@media (max-width: 868px) {
+	#main-content {
+		padding-inline: 5%;
+	}
+
+	.nav {
+		padding-inline: 5%;
+	}
+
+	.shadow {
+		display: none;
+	}
+
+	.arrow {
+		display: none;
+	}
+
+	.image-wrapper {
+		position: relative;
+		margin-bottom: 15%;
+	}
+
+	.image-wrapper::before {
+		content: '';
+		width: 32vw;
+		height: 25vh;
+		margin: auto;
+		position: absolute;
+		inset: -4px;
+		background: linear-gradient(to right, #8b5cf6, #f64cdd);
+		border-radius: 10rem;
+		filter: blur(8px);
+		opacity: 0.25;
+		transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+
+	.image-wrapper:hover::before {
+		opacity: 0.5;
+	}
+
+	.about-image {
+		position: relative;
+		aspect-ratio: 16/9;
+		object-cover: cover;
+		background: #010f1f;
+		overflow: hidden;
+		left: 25%;
+	}
+
+	.title {
+		right: 35%;
+		top: 0%;
+		font-size: 1.6rem;
+	}
+
+	.desc {
+		right: 19%;
+		top: 16%;
+	}
+
+	.desc h3 {
+		font-size: 1.4rem;
+	}
+}
+
+@media (max-width: 468px) {
+	.image-wrapper {
+		margin-block: 15%;
+	}
+
+	.image-wrapper::before {
+		width: 50vw;
+		height: 30vh;
+		border-radius: 9rem;
+	}
+
+	.image-wrapper:hover::before {
+		opacity: 0.5;
+	}
+
+	.about-image {
+		left: 50%;
+	}
+
+	/* .project-card {
+		display: flex;
+		flex-direction: column-reverse;
+		background: rgba(30, 41, 59, 0.7);
+		backdrop-filter: blur(12px);
+		border: 1px solid rgba(148, 163, 184, 0.1);
+	} */
+
+	.card-img:hover {
+		transform: scale(1.1);
+		filter: blur(1px);
+	}
+
+	/* .project-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to top, rgba(1, 15, 31, 0.8), transparent);
+	} */
+}
