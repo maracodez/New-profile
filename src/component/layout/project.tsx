@@ -50,29 +50,6 @@ const Project = () => {
             </div>
         </div>
         <div className='project-card2 md:flex mt-14'>
-            {/* <div className=' md:hidden '>
-                <h4 className='text-purple-500 text-xl'>Featured Project</h4>
-                <h1 className='text-4xl'>Dog Breed</h1>
-                <p className='my-12 bg-[#432043] backdrop-blur-md shadow-md p-10 leading-loose rounded-xl text-xl'>A web app for visualizing animal(dog breed) specie. View your dog breeds, their specie, images, names and detailed information about each breed. Search desired dog breed which are not showcased on the dashboard and more.</p>
-                <div className='flex cursor-pointer'>
-                    <motion.a 
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        title='Github Repo'
-                        href="https://maracodez.github.io/dog-breed-api/"
-                    >
-                        <img src={icon} alt="" />
-                    </motion.a>
-                   <motion.a 
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
-                        title='Live Demo'
-                        href="https://dog-breed-api-zeta.vercel.app/"
-                    >
-                        <img src={icon} alt="" />
-                   </motion.a>
-                </div>
-            </div> */}
             <h1 className='project-scrn-title md:hidden text-[3rem]'>Dog Breed</h1>
             <div className='project-image2 md:w-1/2 relative shadow-lg'>
                 <img src={breed} alt="" className='card-img absolute  right-12 bottom-0 left-0 rounded-xl w-[93%] h-[90%]'/>
