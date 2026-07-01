@@ -5,11 +5,37 @@ html {
 }
 
 body {
-    font-family:  'preahvihear', 'Inter', sans-serif;
+    font-family:  'Arial';
 }
 
 .shadow {
 	display: block;
+}
+
+@media (max-width: 888px) {
+	#main-content {
+		padding-inline: 4%;
+	}
+
+	.nav {
+		padding-inline: 5%;
+	}
+
+	.project-card {
+		margin-bottom: 9%;
+	}
+
+	.card {
+		bottom: 2%;
+		right: 39%;
+		padding: 2px;
+	}
+
+	.card-2 {
+		bottom: 1%;
+		padding: 3px;
+		font-size: 1.1rem;
+	}
 }
 
 @media (max-width: 868px) {
@@ -75,6 +101,91 @@ body {
 	.desc h3 {
 		font-size: 1.4rem;
 	}
+
+	.project-title {
+		display: block;
+		font-size: 3rem;
+		border-left: #8b5cf6 solid 5px;
+		padding-left: 9px;
+	}
+
+	.project-card,
+	.project-card2 {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 77vh;
+		background: #24183e;
+		padding: 10px;
+		border-radius: 15px;
+		margin-top: 20px;
+	}
+
+	.project-card h4,
+	.project-card2 h4 {
+		display: none;
+	}
+
+	.project-card h1 {
+		font-size: 3rem;
+		padding: 5px;
+	}
+
+	.card {
+		margin-block: 0.8%;
+		right: 0;
+		bottom: 18%;
+		font-size: 1.6rem;
+		padding: 15px;
+		/* width: 100%; */
+	}
+
+	.project-url {
+		bottom: 5%;
+		padding-left: 5%;
+	}
+
+	.project-url a,
+	.project-url2 a {
+		font-size: 1.8rem;
+	}
+
+	.project-image,
+	.project-image2 {
+		width: 100%;
+	}
+
+	.project-image2 {
+		margin-inline-start: 5px;
+	}
+
+	.project-scrn-title {
+		display: block;
+	}
+
+	.project-card2 {
+		height: 73vh;
+	}
+
+	.project-2 {
+		width: 100%;
+	}
+
+	.project-2 h1 {
+		display: none;
+	}
+
+	.card-2 {
+		width: 100%;
+		position: initial;
+		font-size: 1.8rem;
+		padding: 3%;
+	}
+
+	.project-url2 {
+		bottom: 3%;
+		left: 2%;
+	}
 }
 
 @media (max-width: 468px) {
@@ -96,22 +207,42 @@ body {
 		left: 50%;
 	}
 
-	/* .project-card {
-		display: flex;
+	.project-card {
 		flex-direction: column-reverse;
-		background: rgba(30, 41, 59, 0.7);
-		backdrop-filter: blur(12px);
-		border: 1px solid rgba(148, 163, 184, 0.1);
-	} */
+		height: 85vh;
+	}
+
+	.project-card h1 {
+		padding-top: 8%;
+	}
+
+	.card {
+		padding: 5px;
+	}
 
 	.card-img:hover {
 		transform: scale(1.1);
 		filter: blur(1px);
 	}
 
-	/* .project-overlay {
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(to top, rgba(1, 15, 31, 0.8), transparent);
-	} */
+	.project-image {
+		margin-top: 0%;
+	}
+
+	.card-2 {
+		font-size: 1.4rem;
+		padding: 1%;
+	}
+
+	.project-url2 {
+		bottom: 4%;
+		left: 4%;
+	}
+}
+
+@media (max-width: 375px) {
+
+	.project-card {
+		height: 100vh;
+	}
 }

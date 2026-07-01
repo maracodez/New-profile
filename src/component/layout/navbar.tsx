@@ -2,6 +2,7 @@
 import { motion } from "motion/react"
 import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import resume from "../../assets/my_resume.pdf.pdf"
 //import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -104,7 +105,7 @@ const Navbar = () => {
                     onClick={() => scrollToSection('lab')}
 				>Lab</button>
 				<button>
-					<a className="bg-[#8b5cf6] text-[#ffffff] px-[1.5rem] py-[0.75rem] rounded-full cursor-pointer hover:shadow-[0_0_20px_rgba(139, 92, 246, 0.3)] hover:opacity-[0.9]" href="#">RESUME</a>
+					<a className="bg-[#8b5cf6] text-[#ffffff] px-[1.5rem] py-[0.75rem] rounded-full cursor-pointer hover:shadow-[0_0_20px_rgba(139, 92, 246, 0.3)] hover:opacity-[0.9]" href={resume}>RESUME</a>
 				</button>
             </div>
         </div>
@@ -118,7 +119,7 @@ const Navbar = () => {
                 <button onClick={() => scrollToSection('about')} className={`cursor-pointer ${activeSection === "about" ? "text-purple-500" : "text-white hover:text-purple-500 hover:text-xl"}`}>About</button>
                 <button onClick={() => scrollToSection('lab')} className={`cursor-pointer ${activeSection === "lab" ? "text-purple-500" : "text-white hover:text-purple-500 hover:text-xl"}`}>Lab</button>
 				<button>
-					<a className="bg-[#8b5cf6] text-[#ffffff] px-[1.5rem] py-[0.75rem] rounded-full cursor-pointer hover:shadow-[0_0_20px_rgba(139, 92, 246, 0.3)] hover:opacity-[0.9]" href="#">RESUME</a>
+					<a className="bg-[#8b5cf6] text-[#ffffff] px-[1.5rem] py-[0.75rem] rounded-full cursor-pointer hover:shadow-[0_0_20px_rgba(139, 92, 246, 0.3)] hover:opacity-[0.9]" href={resume}>RESUME</a>
 				</button>
             </div>
         )}

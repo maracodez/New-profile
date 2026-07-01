@@ -103,7 +103,7 @@ const Page = () => {
                         className='absolute w-28 h-28 rounded-full bg-[conic-gradient(from_180deg, #42e8ff, #8b5cf6, #d946ef, #42e8ff)] blur-xl opacity-80'
                     />
                      
-                    <div className='absolute w-24 h-24 rounded-full bg-gradient-to-br from-[#d946ef] to-pink-300'/>
+                    <div className='absolute w-18 h-18 rounded-full bg-gradient-to-br from-[#d946ef] to-pink-300'/>
                     <motion.div
                         animate={
                             isSpeaking
@@ -118,7 +118,7 @@ const Page = () => {
                             duration: 1.8,
                             repeat: Infinity,
                         }}
-                        className='relative flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#241c62] to-blue-300 text-white shadow-[0_0_30px_rgba(0,0,0,0.4)]'
+                        className='relative flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#241c62] to-blue-300 text-white shadow-[0_0_30px_rgba(0,0,0,0.4)]'
                     >
                         {isSpeaking ? (
                             <FiMic 

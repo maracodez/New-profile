@@ -42,7 +42,7 @@ const About = () => {
 						viewport={{ once: true }}
 						onClick={() => setShowMore((prev) => !prev)}
 						id="mode"
-						className="bg-gradient-to-br from-[#130428] to-[#21113A] border-2 rounded-2xl border-[#2B1B4A] cursor-pointer mb-4 p-4"
+						className="bg-gradient-to-br from-[#130428] to-[#21113A] border-2 rounded-2xl border-[#2B1B4A] cursor-pointer mb-4 px-2"
 					>
 						{showMore ? "Show less" : "Read more"}
 					</motion.button>    
